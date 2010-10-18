@@ -7,11 +7,46 @@ call pathogen#helptags()
 set nocompatible
 set backspace=indent,eol,start
 
+" Buffer wechseln ohne zu speicher ist ok
+set hidden
+
+" Vervollständigen wie bei der Bash mit Tab und langer Liste
+set wildmenu
+set wildmode=list:longest,full
+
 " Alte Befehle soll er sich merken
 set history=1000
 
 " Der Leader-Key ist das Komma bei mir 
 let mapleader = ','
+
+" Ich habe eine Maus...
+set mouse=a
+
+" Mit Zeilennummern
+set number
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+set softtabstop=4
+set autoindent
+
+" Mindestens drei Zeilen noch anzeigen beim Scrollen
+set scrolloff=3
+
+" Für die Suche
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Mit F4 wird die Suche nicht mmehr hervorgehoben
+noremap <F4> :set hlsearch! hlsearch?<CR>
+
+" Temporäre Dateien sollen woanders liegen, nicht in den Projekten
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " mit w!! kann man auch als root Dateien speichern
 cmap w!! w !sudo tee % >/dev/null 
@@ -34,5 +69,17 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o
 " http://github.com/mileszs/ack.vim
 " Fur Debian / Ubuntu
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-" Ack on <leader>a
 nnoremap <leader>a :Ack
+
+" Command-T https://wincent.com/products/command-t
+" liegt per default auf leader-t
+nnoremap <leader>o :CommandT<CR>
+
+" taglist erkennt via ctags Funktionen usw
+" Benötigt exuberant ctags !!
+" apt-get install exuberant-ctags
+let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
+let Tlist_Show_One_File = 1       " Only show tags for current buffer
+let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
+nmap <silent> <leader>f :TlistToggle<CR>
+
