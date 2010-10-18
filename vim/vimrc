@@ -25,4 +25,14 @@ set listchars=tab:▸\ ,eol:¬
 nnoremap <leader>t :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']
 
+" Snipmate
+" http://www.vim.org/scripts/script.php?script_id=2540
 
+
+" ack-grep ist fast besser als Dominosteine
+" http://betterthangrep.com/
+" http://github.com/mileszs/ack.vim
+" Fur Debian / Ubuntu
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" Ack on <leader>a
+nnoremap <leader>a :Ack

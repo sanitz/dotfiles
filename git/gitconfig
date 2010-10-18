@@ -9,10 +9,10 @@
 [alias]
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
 	unstage = reset HEAD
- 	who = log --reverse --format=\"%cn\" | sort | uniq -c | sort -g -r
-    	st = status -s
-    	ci = commit
-    	br = branch
+	who = log --reverse --format=\"%cn\" | sort | uniq -c | sort -g -r
+	st = status -s
+	ci = commit
+	br = branch
 	co = checkout
-   	df = diff
- 	lg = log -p
+	df = diff
+	lg = log -p
