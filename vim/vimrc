@@ -1,0 +1,5 @@
+" No Compatibility. That just sucks
+" especially annoying on redhat/windows/osx
+set nocompatible
+set backspace=indent,eol,start
+
