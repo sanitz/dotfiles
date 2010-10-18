@@ -1,5 +1,28 @@
-" No Compatibility. That just sucks
-" especially annoying on redhat/windows/osx
+" Als erstes pathogen installieren
+" http://www.vim.org/scripts/script.php?script_id=2332
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+" No Compatibility... 2010
 set nocompatible
 set backspace=indent,eol,start
+
+" Alte Befehle soll er sich merken
+set history=1000
+
+" Der Leader-Key ist das Komma bei mir 
+let mapleader = ','
+
+" mit w!! kann man auch als root Dateien speichern
+cmap w!! w !sudo tee % >/dev/null 
+
+" Um Leerzeichen usw. anzuzeigen, kann man umschalten mit leader+s
+nmap <leader>s :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+" NERDTree
+" http://www.vim.org/scripts/script.php?script_id=1658
+nnoremap <leader>t :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']
+
 
