@@ -1,0 +1,18 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[user]
+	name = Sebastian Sanitz
+	email = sebastian@sanitz.net
+[alias]
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	unstage = reset HEAD
+ 	who = log --reverse --format=\"%cn\" | sort | uniq -c | sort -g -r
+    	st = status -s
+    	ci = commit
+    	br = branch
+	co = checkout
+   	df = diff
+ 	lg = log -p
