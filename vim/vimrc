@@ -41,6 +41,14 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Einrückung
+if has("autocmd")
+    filetype plugin indent on
+endif
+
+" Vor dem Einfügen von formatierten Text
+set pastetoggle=<F2>
+
 " Mit F4 wird die Suche nicht mmehr hervorgehoben
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
