@@ -17,7 +17,7 @@ set wildmode=list:longest,full
 " Alte Befehle soll er sich merken
 set history=1000
 
-" Der Leader-Key ist das Komma bei mir 
+" Der Leader-Key ist das Komma bei mir
 let mapleader = ','
 
 " Ich habe eine Maus...
@@ -48,8 +48,17 @@ noremap <F4> :set hlsearch! hlsearch?<CR>
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
+" einfaches Wechseln der Buffer
+nmap <silent> <F9> :bn<CR>
+nmap <silent> <F10> :bp<CR>
+
+" F8 macht tabs zu whitespaces, entfernt unnütze ws am Ende der Zeile
+nnoremap <silent> <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
+
+let g:netrw_list_hide='^\.,.\(pyc\|pyo\|o\)$'
+
 " mit w!! kann man auch als root Dateien speichern
-cmap w!! w !sudo tee % >/dev/null 
+cmap w!! w !sudo tee % >/dev/null
 
 " Um Leerzeichen usw. anzuzeigen, kann man umschalten mit leader+s
 nmap <leader>s :set list!<CR>
@@ -62,7 +71,9 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o
 
 " Snipmate
 " http://www.vim.org/scripts/script.php?script_id=2540
-
+" und zu 99% benutze iyh django ;-)
+autocmd FileType python set ft=python.django
+autocmd FileType html set ft=htmldjango.html
 
 " ack-grep ist fast besser als Dominosteine
 " http://betterthangrep.com/
