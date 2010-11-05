@@ -41,6 +41,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+set wildignore=*.pyc
+
 " Einrückung
 if has("autocmd")
     filetype plugin indent on
