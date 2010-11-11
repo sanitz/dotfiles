@@ -112,3 +112,9 @@ export PATH=$HOME/local/bin:$PATH
 unset MANPATH
 export MANPATH=$HOME/local/share/man:$MANPATH
 
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+
