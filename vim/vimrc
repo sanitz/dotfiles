@@ -22,6 +22,14 @@ let mapleader = ','
 
 " Ich habe eine Maus...
 set mouse=a
+set nomousefocus
+set mousehide
+
+" Farben
+set t_Co=256
+set background=dark
+colorscheme lettuce
+highlight SpellBad term=underline gui=undercurl guisp=Orange
 
 " Mit Zeilennummern
 set number
@@ -38,15 +46,13 @@ set scrolloff=3
 " Für die Suche
 set hlsearch
 set incsearch
-set ignorecase
+
 set smartcase
 
 set wildignore=*.pyc
 
-" Einrückung
-if has("autocmd")
-    filetype plugin indent on
-endif
+filetype plugin indent on
+syntax on
 
 " Vor dem Einfügen von formatierten Text
 set pastetoggle=<F2>
@@ -76,12 +82,23 @@ set listchars=tab:▸\ ,eol:¬
 
 " NERDTree
 " http://www.vim.org/scripts/script.php?script_id=1658
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']
+let NERDChristmasTree = 1
+let NERDTreeHighlightCursorline = 1
+" Make it easy to see where we are
+let NERDTreeHighlightCursorline = 1
+
+" Make bookmarks visible
+let NERDTreeShowBookmarks = 1
+
+" Show hidden files
+let NERDTreeShowHidden = 1
+
 
 " Snipmate
 " http://www.vim.org/scripts/script.php?script_id=2540
-" und zu 99% benutze iyh django ;-)
+" und zu 99% benutze ich django ;-)
 autocmd FileType python set ft=python.django
 autocmd FileType html set ft=htmldjango.html
 
@@ -104,6 +121,14 @@ let Tlist_Show_One_File = 1       " Only show tags for current buffer
 let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
 nmap <silent> <leader>f :TlistToggle<CR>
 
-" Farben
-colorscheme eclipse
+" Gundo - braucht Vim >= 7.3 ...
+nnoremap <silent><leader>g :GundoToggle<CR>
 
+set cmdheight=2
+set laststatus=2
+set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+set showcmd
+set number
+
+" pyflakes
+let g:pyflakes_use_quickfix = 0
