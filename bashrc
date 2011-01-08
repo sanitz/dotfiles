@@ -77,7 +77,7 @@ prompt_simple() {
 
 prompt_git() {
     unset PROMPT_COMMAND
-    PS1="${COLOR2}\W${GREY}\$(parse_git_branch)${COLOR1}${P}${PS_CLEAR} "
+    PS1="${COLOR2}\w${GREY}\$(parse_git_branch)${COLOR1}${P}${PS_CLEAR} "
     PS2="${COLOR1}>${PS_CLEAR} "
 }
 

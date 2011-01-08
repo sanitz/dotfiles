@@ -28,7 +28,7 @@ set mousehide
 " Farben
 set t_Co=256
 set background=dark
-colorscheme lettuce
+colorscheme ir_black
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
 " Mit Zeilennummern
@@ -107,7 +107,7 @@ autocmd FileType html set ft=htmldjango.html
 " http://github.com/mileszs/ack.vim
 " Fur Debian / Ubuntu
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack 
 
 " Command-T https://wincent.com/products/command-t
 " liegt per default auf leader-t
@@ -129,6 +129,13 @@ set laststatus=2
 set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 set showcmd
 set number
+set cursorline
 
 " pyflakes
 let g:pyflakes_use_quickfix = 0
+
+" Um schnell auf die vimrc zu editieren und 
+" zu akutalisieren
+nnoremap <silent> <leader>e :e! ~/.vimrc<cr>
+nnoremap <silent> <leader>s :source ~/.vimrc<cr>
+
