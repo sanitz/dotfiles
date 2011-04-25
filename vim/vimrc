@@ -28,6 +28,8 @@ set mousehide
 " Farben
 set t_Co=256
 set background=dark
+colorscheme solarized
+
 colorscheme ir_black
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 

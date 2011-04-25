@@ -144,9 +144,14 @@ export MANPATH=$HOME/local/share/man:$MANPATH
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# virtual env
+export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
-
+source /usr/local/bin/virtualenvwrapper.sh
 
 test -n "$PS1" &&
-prompt_compact
+prompt_git
+export PATH=/var/lib/gems/1.8/bin/:$PATH
+export PIP_USE_MIRRORS=true
+

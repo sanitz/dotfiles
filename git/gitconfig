@@ -16,3 +16,9 @@
 	co = checkout
 	df = diff
 	lg = log -p
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 924x669+375+127
+	main-window-view = HistoryView
+	history-view-vpane-position = 361
+	file-view-vpane-position = 525
