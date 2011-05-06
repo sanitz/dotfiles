@@ -28,18 +28,18 @@ set mousehide
 " Farben
 set t_Co=256
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 colorscheme ir_black
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
 " Mit Zeilennummern
 set number
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set expandtab
-set softtabstop=4
+set softtabstop=2
 set autoindent
 
 " Mindestens drei Zeilen noch anzeigen beim Scrollen
@@ -101,8 +101,8 @@ let NERDTreeShowHidden = 1
 " Snipmate
 " http://www.vim.org/scripts/script.php?script_id=2540
 " und zu 99% benutze ich django ;-)
-autocmd FileType python set ft=python.django
-autocmd FileType html set ft=htmldjango.html
+"autocmd FileType python set ft=python.django
+" autocmd FileType html set ft=htmldjango.html
 
 " ack-grep ist fast besser als Dominosteine
 " http://betterthangrep.com/
