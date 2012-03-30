@@ -30,7 +30,8 @@ set t_Co=256
 set background=dark
 " colorscheme solarized
 
-colorscheme ir_black
+colorscheme lucius
+" colorscheme default
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
 " Mit Zeilennummern
@@ -72,6 +73,10 @@ nmap <silent> <F10> :bp<CR>
 
 " F8 macht tabs zu whitespaces, entfernt unnütze ws am Ende der Zeile
 nnoremap <silent> <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
+
+" Orginal-Belegung von MakeGreen streikt mit Buffergator
+map <unique> <silent> <Leader>m :call MakeGreen()<cr>
+map <unique> <silent> <Leader>b :BuffergatorToggle<CR>
 
 let g:netrw_list_hide='^\.,.\(pyc\|pyo\|o\)$'
 
@@ -118,10 +123,13 @@ nnoremap <leader>o :CommandT<CR>
 " taglist erkennt via ctags Funktionen usw
 " Benötigt exuberant ctags !!
 " apt-get install exuberant-ctags
-let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
-let Tlist_Show_One_File = 1       " Only show tags for current buffer
-let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
-nmap <silent> <leader>f :TlistToggle<CR>
+"let Tlist_Exit_OnlyWindow = 1     " exit if taglist is last window open
+"let Tlist_Show_One_File = 1       " Only show tags for current buffer
+"let Tlist_Enable_Fold_Column = 0  " no fold column (only showing one file)
+"nmap <silent> <leader>f :TlistToggle<CR>
+
+
+nmap <silent> <F9> :TagbarToggle<CR>
 
 " Gundo - braucht Vim >= 7.3 ...
 nnoremap <silent><leader>g :GundoToggle<CR>

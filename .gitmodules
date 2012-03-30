@@ -22,9 +22,6 @@
 [submodule "vim/bundle/cucumber"]
 	path = vim/bundle/cucumber
 	url = http://github.com/tpope/vim-cucumber.git
-[submodule "vim/bundle/jslint"]
-	path = vim/bundle/jslint
-	url = https://github.com/hallettj/jslint.vim.git
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
@@ -52,3 +49,24 @@
 [submodule "vim/bundle/gitv"]
 	path = vim/bundle/gitv
 	url = https://github.com/gregsexton/gitv.git
+[submodule "vim/bundle/shady"]
+	path = vim/bundle/shady
+	url = https://github.com/cloudhead/shady.vim.git
+[submodule "vim/bundle/robotframework"]
+	path = vim/bundle/robotframework
+	url = https://github.com/yanne/robotframework-vim.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/bundle/jshint"]
+	path = vim/bundle/jshint
+	url = https://github.com/walm/jshint.vim.git
+[submodule "vim/bundle/rvm"]
+	path = vim/bundle/rvm
+	url = https://github.com/tpope/vim-rvm.git
+[submodule "vim/bundle/clojure"]
+	path = vim/bundle/clojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/buffergator"]
+	path = vim/bundle/buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git
